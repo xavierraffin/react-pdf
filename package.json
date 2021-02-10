@@ -1,10 +1,16 @@
 {
-  "name": "@react-pdf/renderer",
+  "name": "@xavierraffin/react-pdf",
   "version": "1.6.12",
   "license": "MIT",
   "author": "Diego Muracciole <diegomuracciole@gmail.com>",
   "homepage": "https://github.com/diegomura/react-pdf#readme",
-  "repository": "git@github.com:diegomura/react-pdf.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavierraffin/react-pdf.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "dist/react-pdf.cjs.js",
   "module": "dist/react-pdf.es.js",
   "browser": {
@@ -20,7 +26,8 @@
     "prepublish": "npm run build",
     "lint": "eslint src",
     "test": "jest",
-    "test:size": "bundlesize"
+    "test:size": "bundlesize",
+    "release": "npm publish --registry=https://npm.pkg.github.com"
   },
   "dependencies": {
     "@babel/runtime": "^7.6.2",
@@ -35,12 +42,12 @@
     "media-engine": "^1.0.3",
     "page-wrapping": "^1.1.0",
     "ramda": "^0.26.1",
-    "react-reconciler": "^0.24.0",
+    "react-reconciler": "^0.26.1",
     "scheduler": "^0.18.0",
     "yoga-layout-prebuilt": "^1.9.3"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -53,10 +60,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-plugin-add-module-exports": "^1.0.0",
-    "bundlesize": "^0.17.1",
     "chalk": "^2.4.2",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.9.1",
     "eslint": "^5.14.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-jest": "^22.3.0",
@@ -70,8 +74,8 @@
     "mock-fs": "^4.8.0",
     "mockdate": "^2.0.2",
     "prettier": "^1.16.4",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rimraf": "^2.6.3",
     "rollup": "^1.2.3",
     "rollup-plugin-alias": "^1.5.1",
